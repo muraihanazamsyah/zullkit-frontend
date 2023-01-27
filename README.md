@@ -27,4 +27,3 @@ npm run dev
 ```sh
 npm run build
 ```
-#� �z�u�l�l�k�i�t�-�f�r�o�n�t�e�n�d�
