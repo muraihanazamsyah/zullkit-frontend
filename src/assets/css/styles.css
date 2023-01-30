@@ -711,6 +711,7 @@ video {
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -6814,11 +6815,13 @@ video {
 }
 
 .w-min {
+  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
 
 .w-max {
+  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -6832,11 +6835,13 @@ video {
 }
 
 .min-w-min {
+  min-width: -webkit-min-content;
   min-width: -moz-min-content;
   min-width: min-content;
 }
 
 .min-w-max {
+  min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
 }
@@ -6898,11 +6903,13 @@ video {
 }
 
 .max-w-min {
+  max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
 }
 
 .max-w-max {
+  max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
 }
@@ -9915,9 +9922,22 @@ video {
   --tw-scale-y: 1.5;
 }
 
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }
 
@@ -9928,42 +9948,69 @@ video {
   }
 }
 
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
   }
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
   50% {
     transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
 .animate-none {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .animate-spin {
-  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 .animate-ping {
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .animate-bounce {
-  animation: bounce 1s infinite;
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .cursor-auto {
@@ -10072,10 +10119,12 @@ video {
 }
 
 .auto-cols-min {
+  grid-auto-columns: -webkit-min-content;
   grid-auto-columns: min-content;
 }
 
 .auto-cols-max {
+  grid-auto-columns: -webkit-max-content;
   grid-auto-columns: max-content;
 }
 
@@ -10104,10 +10153,12 @@ video {
 }
 
 .auto-rows-min {
+  grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
 }
 
 .auto-rows-max {
+  grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
 }
 
@@ -32134,6 +32185,7 @@ video {
   }
 
   .sm\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -38237,11 +38289,13 @@ video {
   }
 
   .sm\:w-min {
+    width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
   }
 
   .sm\:w-max {
+    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -38255,11 +38309,13 @@ video {
   }
 
   .sm\:min-w-min {
+    min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .sm\:min-w-max {
+    min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
   }
@@ -38321,11 +38377,13 @@ video {
   }
 
   .sm\:max-w-min {
+    max-width: -webkit-min-content;
     max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .sm\:max-w-max {
+    max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
   }
@@ -41339,23 +41397,28 @@ video {
   }
 
   .sm\:animate-none {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .sm\:animate-spin {
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .sm\:animate-ping {
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .sm\:animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .sm\:animate-bounce {
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .sm\:cursor-auto {
@@ -41464,10 +41527,12 @@ video {
   }
 
   .sm\:auto-cols-min {
+    grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
   .sm\:auto-cols-max {
+    grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
@@ -41496,10 +41561,12 @@ video {
   }
 
   .sm\:auto-rows-min {
+    grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
   .sm\:auto-rows-max {
+    grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
@@ -63514,6 +63581,7 @@ video {
   }
 
   .md\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -69617,11 +69685,13 @@ video {
   }
 
   .md\:w-min {
+    width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
   }
 
   .md\:w-max {
+    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -69635,11 +69705,13 @@ video {
   }
 
   .md\:min-w-min {
+    min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .md\:min-w-max {
+    min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
   }
@@ -69701,11 +69773,13 @@ video {
   }
 
   .md\:max-w-min {
+    max-width: -webkit-min-content;
     max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .md\:max-w-max {
+    max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
   }
@@ -72719,23 +72793,28 @@ video {
   }
 
   .md\:animate-none {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .md\:animate-spin {
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .md\:animate-ping {
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .md\:animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .md\:animate-bounce {
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .md\:cursor-auto {
@@ -72844,10 +72923,12 @@ video {
   }
 
   .md\:auto-cols-min {
+    grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
   .md\:auto-cols-max {
+    grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
@@ -72876,10 +72957,12 @@ video {
   }
 
   .md\:auto-rows-min {
+    grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
   .md\:auto-rows-max {
+    grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
@@ -94894,6 +94977,7 @@ video {
   }
 
   .lg\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -100997,11 +101081,13 @@ video {
   }
 
   .lg\:w-min {
+    width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
   }
 
   .lg\:w-max {
+    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -101015,11 +101101,13 @@ video {
   }
 
   .lg\:min-w-min {
+    min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .lg\:min-w-max {
+    min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
   }
@@ -101081,11 +101169,13 @@ video {
   }
 
   .lg\:max-w-min {
+    max-width: -webkit-min-content;
     max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .lg\:max-w-max {
+    max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
   }
@@ -104099,23 +104189,28 @@ video {
   }
 
   .lg\:animate-none {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .lg\:animate-spin {
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .lg\:animate-ping {
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .lg\:animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .lg\:animate-bounce {
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .lg\:cursor-auto {
@@ -104224,10 +104319,12 @@ video {
   }
 
   .lg\:auto-cols-min {
+    grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
   .lg\:auto-cols-max {
+    grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
@@ -104256,10 +104353,12 @@ video {
   }
 
   .lg\:auto-rows-min {
+    grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
   .lg\:auto-rows-max {
+    grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
@@ -126274,6 +126373,7 @@ video {
   }
 
   .xl\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -132377,11 +132477,13 @@ video {
   }
 
   .xl\:w-min {
+    width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
   }
 
   .xl\:w-max {
+    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -132395,11 +132497,13 @@ video {
   }
 
   .xl\:min-w-min {
+    min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .xl\:min-w-max {
+    min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
   }
@@ -132461,11 +132565,13 @@ video {
   }
 
   .xl\:max-w-min {
+    max-width: -webkit-min-content;
     max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .xl\:max-w-max {
+    max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
   }
@@ -135479,23 +135585,28 @@ video {
   }
 
   .xl\:animate-none {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .xl\:animate-spin {
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .xl\:animate-ping {
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .xl\:animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .xl\:animate-bounce {
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .xl\:cursor-auto {
@@ -135604,10 +135715,12 @@ video {
   }
 
   .xl\:auto-cols-min {
+    grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
   .xl\:auto-cols-max {
+    grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
@@ -135636,10 +135749,12 @@ video {
   }
 
   .xl\:auto-rows-min {
+    grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
   .xl\:auto-rows-max {
+    grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
@@ -157654,6 +157769,7 @@ video {
   }
 
   .\32xl\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -163757,11 +163873,13 @@ video {
   }
 
   .\32xl\:w-min {
+    width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
   }
 
   .\32xl\:w-max {
+    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -163775,11 +163893,13 @@ video {
   }
 
   .\32xl\:min-w-min {
+    min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .\32xl\:min-w-max {
+    min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
   }
@@ -163841,11 +163961,13 @@ video {
   }
 
   .\32xl\:max-w-min {
+    max-width: -webkit-min-content;
     max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .\32xl\:max-w-max {
+    max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
   }
@@ -166859,23 +166981,28 @@ video {
   }
 
   .\32xl\:animate-none {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .\32xl\:animate-spin {
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .\32xl\:animate-ping {
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .\32xl\:animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .\32xl\:animate-bounce {
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .\32xl\:cursor-auto {
@@ -166984,10 +167111,12 @@ video {
   }
 
   .\32xl\:auto-cols-min {
+    grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
   .\32xl\:auto-cols-max {
+    grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
@@ -167016,10 +167145,12 @@ video {
   }
 
   .\32xl\:auto-rows-min {
+    grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
   .\32xl\:auto-rows-max {
+    grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
