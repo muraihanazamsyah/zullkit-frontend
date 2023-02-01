@@ -1,4 +1,5 @@
 <script setup>
+import Authbutton from "./Authbutton.vue";
 import Logo from "./Logo.vue";
 import NavigationLinks from "./NavigationLinks.vue";
 import UserInfo from "./UserInfo.vue";
@@ -12,6 +13,7 @@ import UserInfo from "./UserInfo.vue";
       class="container flex flex-wrap items-center justify-between mx-auto my-2"
     >
       <Logo />
+      <Authbutton />
       <NavigationLinks />
     </div>
   </nav>

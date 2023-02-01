@@ -13,7 +13,7 @@ const galleries = ref([
 <template>
   <section id="gallery">
     <img
-      :src="'src/assets/img/' + defaultImages"
+      :src="'/src/assets/img/' + defaultImages"
       alt=""
       class="w-full mt-6 rounded-2xl"
     />
@@ -26,20 +26,13 @@ const galleries = ref([
             'ring-2 ring-indigo-500': defaultImages == gallery.image,
           }"
         >
-          <img :src="'src/assets/img/' + gallery.image" class="w-full" alt="" />
+          <img
+            :src="'/src/assets/img/' + gallery.image"
+            class="w-full"
+            alt=""
+          />
         </div>
       </template>
-      <!-- <div
-        class="overflow-hidden cursor-pointer ring-2 ring-indigo-500 rounded-2xl"
-      >
-        <img src="@/assets/img/gallery-3.png" class="w-full" alt="" />
-      </div>
-      <div class="overflow-hidden cursor-pointer rounded-2xl">
-        <img src="@/assets/img/gallery-4.png" class="w-full" alt="" />
-      </div>
-      <div class="overflow-hidden cursor-pointer rounded-2xl">
-        <img src="@/assets/img/gallery-5.png" class="w-full" alt="" />
-      </div> -->
     </div>
   </section>
 </template>
